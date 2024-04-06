@@ -1,6 +1,6 @@
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import './about.css'; 
+import './about.css';
 
 function About() {
     return (
@@ -17,12 +17,12 @@ function About() {
             </div>
             <div className="svg3">
                 <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <circle id="Oval" cx="7.5" cy="7.5" r="6.5" fill="white" stroke="#F7CE85" strokeWidth="2"/>
+                    <circle id="Oval" cx="7.5" cy="7.5" r="6.5" fill="white" stroke="#F7CE85" strokeWidth="2" />
                 </svg>
             </div>
             <div className="svg4">
                 <svg width="18" height="17" viewBox="0 0 18 17" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path id="Path 6" d="M3.48959 3.25336C1.90728 3.54793 1.30332 5.49571 2.44141 6.63379L11.1423 15.3347C12.2804 16.4728 14.2282 15.8688 14.5227 14.2865L16.513 3.59535C16.77 2.21471 15.5614 1.00608 14.1808 1.26309L3.48959 3.25336Z" fill="white" stroke="#FF8585" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                    <path id="Path 6" d="M3.48959 3.25336C1.90728 3.54793 1.30332 5.49571 2.44141 6.63379L11.1423 15.3347C12.2804 16.4728 14.2282 15.8688 14.5227 14.2865L16.513 3.59535C16.77 2.21471 15.5614 1.00608 14.1808 1.26309L3.48959 3.25336Z" fill="white" stroke="#FF8585" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                 </svg>
             </div>
             <div className="main_page">

@@ -1,5 +1,6 @@
 import  React from "react";
 import './wahtwedo.css'
+
 function FeaturesSection() {
   const stepsData = [
     {
@@ -29,7 +30,7 @@ function FeaturesSection() {
     },
   ];
   return (
-    <>
+    <div>
       <section className="features-section h-96">
         <header className="section-header">
           <h3 className="section-subtitle">Features</h3>
@@ -47,7 +48,7 @@ function FeaturesSection() {
           ))}
         </div>
       </section>
-    </>
+    </div>
   );
 }
 export default FeaturesSection;
