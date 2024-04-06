@@ -4,7 +4,8 @@ import './about.css';
 
 function About() {
     return (
-        <div>
+        <div id='aboutus'>
+        <div id='about'>
             <div className="svg1">
                 <svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <rect id="Rectangle" x="0.414214" y="9.60657" width="13" height="13" rx="3" transform="rotate(-45 0.414214 9.60657)" fill="red" stroke="#65FFC7" strokeWidth="2" />
@@ -27,8 +28,7 @@ function About() {
             </div>
             <div className="main_page">
                 <div className="div1">
-                    <div className="image_div"><img src="./pexels-vanessa-garcia-6325984.jpg" alt="" /></div>
-                    <div className="dotted"></div>
+                    <div className="image_div"><img className='about_image' src="./pexels-vanessa-garcia-6325984.jpg" alt="" /></div>
                 </div>
                 <div className="div2">
                     <div className="content">
@@ -44,6 +44,7 @@ function About() {
                     <div className="btn btn-outline-primary shadow mt-4">Explore</div>
                 </div>
             </div>
+        </div>
         </div>
     );
 }
