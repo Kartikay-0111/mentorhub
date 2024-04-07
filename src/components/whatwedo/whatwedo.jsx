@@ -31,13 +31,13 @@ function FeaturesSection() {
   ];
   return (
     <div>
-      <section className="features-section h-96">
-        <header className="section-header">
+      <section className="features-section">
+        <header className="section-header pt-5">
           <h3 className="section-subtitle">Features</h3>
           <h2 className="section-title text-black">How it works</h2>
         </header>
 
-    <div className="steps-list w-28">
+    <div className="steps-list">
           {stepsData.map((step, index) => (
             <div key={index} className="step-item">
                <img src={step.icon} alt="Icon 1" className="icon" />

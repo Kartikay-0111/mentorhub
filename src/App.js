@@ -1,11 +1,12 @@
 
 import { Mentorcard } from "./components/mentorcard/mentorcard";
-import About from './components/aboutus/about';
+// import About from './components/aboutus/about';
 // import Landing from "./components/landing page/landing";
 // import loginApp from "./components/login/login";
 import 'bootstrap/dist/css/bootstrap.min.css'; 
 import 'bootstrap/dist/js/bootstrap.bundle.min';
 // import SignUpApp from "./components/sign up/signup";
+// import FeaturesSection from "./components/whatwedo/whatwedo"
 import gsap from "gsap";
 import { useLayoutEffect } from "react";
 import { useRef } from "react";
@@ -71,7 +72,8 @@ function App() {
   return (
     <div style={{display:"flex",flexDirection:"column"}} className="App flex flex-col">
       {/* <Landing /> */}
-      <About />
+      {/* <FeaturesSection /> */}
+      {/* <About /> */}
 <Mentorcard />
     </div>
   );
