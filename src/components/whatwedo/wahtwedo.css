@@ -2,22 +2,20 @@
   display: flex;
   flex-direction: column;
 }
-
 @media (max-width: 991px) {
   .section-header {
     max-width: 100%;
     padding: 0 20px;
   }
 }
-
 .section-subtitle {
-  color: #c9c9c9;
+  color: #fff0f0;
   text-align: center;
   letter-spacing: 1px;
   text-transform: uppercase;
   font: 400 18px Roboto, sans-serif;
+  margin-top: 40px;
 }
-
 .section-title {
   color: #3d3f42;
   text-align: center;
@@ -25,28 +23,37 @@
   margin-top: 31px;
   font: 400 52px/115% Rajdhani, -apple-system, Roboto, Helvetica, sans-serif;
 }
-
 @media (max-width: 991px) {
   .section-title {
     font-size: 40px;
   }
 }
 
-.icon {
-  aspect-ratio: 1;
-  object-position: center;
-  width: 90px;
+@media (max-width: 991px) {
+  .icon-list {
+    flex-wrap: wrap;
+    white-space: initial;
+    margin: 40px 2px 0 0;
+  }
 }
-
+@media (max-width: 991px) {
+  .icon-wrapper {
+    white-space: initial;
+    padding: 0 20px;
+  }
+}
+.feature_icon {
+  width: 100px;
+ aspect-ratio: 1/1;
+}
 .steps-list {
   display: flex;
   margin-top: 20px;
-  width: 100%;
-  gap: 20px;
+  width: 100vw;
   text-align: center;
+  gap: 20px;
   justify-content: center;
 }
-
 @media (max-width: 991px) {
   .steps-list {
     max-width: 100%;
@@ -54,34 +61,20 @@
     margin-top: 40px;
   }
 }
-
 .step-item {
   display: flex;
   flex-direction: column;
   align-items: center;
-}
 
+}
 .step-title {
-  color: #8c8e91;
+  color: #bc37ba;
   letter-spacing: 0.53px;
   font: 700 18px/156% Rajdhani, -apple-system, Roboto, Helvetica, sans-serif;
 }
-
 .step-description {
   color: #333448;
-  margin-top: 10px;
+  align-self: stretch;
+  margin-top: 20px;
   font: 500 22px/30px Rajdhani, -apple-system, Roboto, Helvetica, sans-serif;
-}
-
-.step-icon {
-  aspect-ratio: 2;
-  object-position: center;
-  width: 37px;
-  margin-top: 10px;
-}
-
-@media (max-width: 991px) {
-  .step-icon {
-    margin-top: 40px;
-  }
 }

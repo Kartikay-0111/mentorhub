@@ -14,8 +14,13 @@ body {
 img{
   height: 100%;
   width: 100%;
+  box-sizing: border-box;
+  filter: grayscale(0.4);
 }
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+::-webkit-scrollbar {
+  width: 0;
 }

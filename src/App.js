@@ -1,18 +1,31 @@
-
+import "bootstrap/dist/css/bootstrap.min.css";
+import "bootstrap/dist/js/bootstrap.bundle.min";
+import Landing from "./components/landing page/landing";
+import About from "./components/aboutus/about";
 import { Mentorcard } from "./components/mentorcard/mentorcard";
-// import About from './components/aboutus/about';
-// import Landing from "./components/landing page/landing";
-// import loginApp from "./components/login/login";
-import 'bootstrap/dist/css/bootstrap.min.css'; 
-import 'bootstrap/dist/js/bootstrap.bundle.min';
-// import SignUpApp from "./components/sign up/signup";
-// import FeaturesSection from "./components/whatwedo/whatwedo"
-import gsap from "gsap";
+import FeaturesSection from "./components/whatwedo/whatwedo";
+import LoginApp from './components/login/login';
+import Review from "./components/review/review";
+import SignUpApp from "./components/sign up/signup";
 import { useLayoutEffect } from "react";
-import { useRef } from "react";
-import React from "react";
+import gsap from "gsap";
+import React, { useRef, useState } from "react";
+
 function App() {
   const comp = useRef(null);
+
+
+  const [showLogin, setShowLogin] = useState(false);
+
+  const toggleLogin = () => {
+    setShowLogin(!showLogin);
+  };
+
+  const [showSignup, setShowSignup] = useState(false);
+
+  const toggleSignup = () => {
+    setShowSignup(!showSignup);
+  };
 
   useLayoutEffect(() => {
     let ctx = gsap.context(() => {
@@ -69,12 +82,49 @@ function App() {
     return () => ctx.revert();
   }, []);
 
+  const aboutRef = useRef(null);
+  const scrollToAbout = () => {
+    aboutRef.current.scrollIntoView({ behavior: "smooth" });
+  };
+
+  const mentorRef = useRef(null);
+  const scrollToMentor = () => {
+    mentorRef.current.scrollIntoView({ behavior: "smooth" });
+  };
+
+  const reviewRef = useRef(null);
+  const scrollToReview = () => {
+    reviewRef.current.scrollIntoView({ behavior: "smooth" });
+  };
+
+  const homeRef = useRef(null);
+  const scrollToHome = () => {
+    homeRef.current.scrollIntoView({ behavior: "smooth" });
+  };
+
   return (
-    <div style={{display:"flex",flexDirection:"column"}} className="App flex flex-col">
-      {/* <Landing /> */}
-      {/* <FeaturesSection /> */}
-      {/* <About /> */}
-<Mentorcard />
+    <div className="App" ref={comp}>
+      {!(showSignup || showLogin) && <div className="grid">
+        <div ref={homeRef}>
+          <Landing toggleSignup={toggleSignup} toggleLogin={toggleLogin} scrollToHome={scrollToHome} scrollToReview={scrollToReview} scrollToMentor={scrollToMentor} scrollToAbout={scrollToAbout} />
+        </div>
+
+        <div ref={aboutRef} >
+          <About />
+        </div>
+        <div >
+          <FeaturesSection />
+        </div>
+        <div ref={mentorRef}>
+          <Mentorcard />
+        </div>
+        <div ref={reviewRef}>
+          <Review />
+        </div>
+      </div>
+      }
+      {showLogin && <LoginApp toggleLogin={toggleLogin} />}
+      {showSignup && <SignUpApp toggleSignup={toggleSignup} />}
     </div>
   );
 }

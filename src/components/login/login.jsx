@@ -1,13 +1,9 @@
-import React, { useState } from 'react';
-import './login.css'; // You need to have CSS styles in a separate file (App.css in this case)
+import React from 'react';
+import './login.css';
 
-function LoginApp() {
-  const [isMentorSelected, setIsMentorSelected] = useState(false);
-  const [isMenteeSelected, setIsMenteeSelected]=useState(true);
+function LoginApp({toggleLogin}) {
 
   const handleOptionClick = () => {
-    // setIsMentorSelected(!isMentorSelected);
-    // setIsMenteeSelected(isMenteeSelected);
     const mentee=document.getElementById("option1");
     const mentor=document.getElementById("option2");
     mentor.addEventListener("click", ()=>{
@@ -22,7 +18,9 @@ function LoginApp() {
     
     });
   };
-
+  const handleLogin = (e) => {
+    alert("Login succesfull");
+  };
 
   return (
     <div className="container">
@@ -34,7 +32,7 @@ function LoginApp() {
           <h2>Mentor</h2>
         </div>
       </div>
-      <div className="main">
+      <div className="loginmain">
         <form className="sign-in-form">
           <div className="sign-in-info">
             <img className="logo" src="./5437683.jpg" alt="Logo" />
@@ -50,7 +48,7 @@ function LoginApp() {
               <label htmlFor="password">Password:</label>
               <input type="password" id="password" name="password" required />
             </div>
-            <button type="submit">Sign In</button>
+            <button onClick={()=>(toggleLogin(),handleLogin())} className='loginbutton' type="submit">Sign In</button>
             <div className="extra-options">
               <a href="#">Forgot Password?</a>
               <span>or</span>
