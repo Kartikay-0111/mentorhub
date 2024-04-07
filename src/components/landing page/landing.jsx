@@ -32,8 +32,7 @@ function Landing({toggleSignup,toggleLogin,scrollToAbout,scrollToMentor,scrollTo
             <ul className="navbar-nav me-auto mb-0">
               <li style={{cursor:"pointer"}} className="nav-item">
                 <a
-                  className="nav-link active"
-                  style={{ color: "rgb(208, 125, 219)" }}
+                  className="nav-link"
                   aria-current="page"
                   onClick={scrollToHome}
                 >
@@ -44,7 +43,6 @@ function Landing({toggleSignup,toggleLogin,scrollToAbout,scrollToMentor,scrollTo
                 <a
                   onClick={scrollToAbout}
                   className="nav-link"
-                  style={{ color: "rgb(208, 125, 219)" }}
                 >
                   About
                 </a>
@@ -53,7 +51,6 @@ function Landing({toggleSignup,toggleLogin,scrollToAbout,scrollToMentor,scrollTo
                 <a
                   onClick={scrollToMentor}
                   className="nav-link"
-                  style={{ color: "rgb(208, 125, 219)" }}
                 >
                   Top Mentors
                 </a>
@@ -62,7 +59,6 @@ function Landing({toggleSignup,toggleLogin,scrollToAbout,scrollToMentor,scrollTo
                 <a
                   onClick={scrollToReview}
                   className="nav-link"
-                  style={{ color: "rgb(208, 125, 219)" }}
                 >
                  Reviews
                 </a>

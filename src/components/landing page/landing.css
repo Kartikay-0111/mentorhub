@@ -24,6 +24,8 @@
     background: linear-gradient(100deg,rgba(128, 0, 128, 0.437),rgba(238, 130, 238, 0.453),rgba(98, 5, 98, 0.442));
     border-radius: 25px;
     margin-top: 5px;
+    -webkit-backdrop-filter: blur(8px);
+    backdrop-filter: blur(8px);
   }
   .buttons {
     display: flex;
