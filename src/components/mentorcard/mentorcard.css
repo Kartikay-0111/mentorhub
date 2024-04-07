@@ -1,20 +1,37 @@
-.card {
-  width: 17vw;
-  height: 44vh;
-  perspective: 1000px;
-  background-color: rgb(83, 66, 99);
-  border: 0;
+.mentor_section{
+  background-color: rgb(88, 68, 107);
+  
+}
+.mentor-card-row{
+  width: 100vw;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  margin-top: 30px;
+  margin-bottom: 50px;
 }
 
+.card {
+  height: 310px;
+  width: 250px;
+  perspective: 1000px;
+  background-color: rgb(83, 68, 107);
+  border: 0;
+}
 .card-inner {
   width: 100%;
   height: 100%;
   position: relative;
   transform-style: preserve-3d;
-  transition: transform 0.999s;
+  transition: transform 1s;
 }
-.image img{
+.card-image img{
   border-radius: 10px;
+  height: 70%;
+  aspect-ratio: 1/1;
+}
+.card-image{
+  height: 100%;
 }
 .card:hover .card-inner {
   transform: rotateY(180deg);
@@ -26,8 +43,9 @@
   width: 100%;
   height: 100%;
   backface-visibility: hidden;
+  background-color: blueviolet;
 }
-.button{
+.explore{
   cursor: pointer;
 }
 .card-front {

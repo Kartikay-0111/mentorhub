@@ -30,19 +30,18 @@ function FeaturesSection() {
   ];
   return (
     <>
-      <section className="features-section h-96">
+      <section className="features-section mb-5">
         <header className="section-header">
           <h3 className="section-subtitle">Features</h3>
           <h2 className="section-title text-black">How it works</h2>
         </header>
 
-    <div className="steps-list w-28">
+    <div className="steps-list">
           {stepsData.map((step, index) => (
             <div key={index} className="step-item">
-               <img src={step.icon} alt="Icon 1" className="icon" />
+               <img src={step.icon} alt="Icon 1" className="feature_icon" />
               <h4 className="step-title">{step.title}</h4>
               <p className="step-description">{step.description}</p>
-              <img src="arrow.png" alt={`Step ${index + 1} icon`} className="step-icon" />
             </div>
           ))}
         </div>

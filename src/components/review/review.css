@@ -1,22 +1,39 @@
 .maindiv{
-    height: 100vh;
     width: 100vw;
-
+    background-color: rgb(89, 65, 113);
 }
-img{
+.review_bg_img{
     position: absolute;
-    height: 100%;
-    width: 100%;
+    z-index: 0;
 }
 .footer{
-    position: absolute;
-    bottom: 0;
+    display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-evenly;
     width: 100%;
-    
+}
+.footer_right_content{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 60%;
+    z-index: 1;
 }
 a{
-    color: blueviolet;
     text-decoration: none;
+}
+.card{
+    overflow: scroll;
+}
+.card h3{
+    color: rgb(9, 38, 38);
+}
+.review_down_div .btn{
+    position: relative;
+    z-index: 1;
+}
+@media (max-width: 819px){
+    .footer_right_content{
+        display: none;
+    }
 }

@@ -1,41 +1,40 @@
 #about{
   width: 100%;
   height: 60vh;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%,-50%);
-  background: rgb(88, 68, 107);
-}
-#aboutus{
-  height: 100%;
-  width: 100%;
-  position: fixed;
+  display: flex;
+  position: relative;
+  align-items: center;
+  background-color: rgb(88, 68, 107);
 }
 .main_page{
-  box-shadow: 0 0 5px 7px rgb(87, 71, 100);
     display: flex;
     align-items: center;
     justify-content: space-evenly;
     width: 100vw;
-    height: 60vh;
+    height: 50vh;
     flex-wrap: wrap;
   }
-  .div1{
-    width:400px;
-    height: 100%;
-    position: relative;
+@media (max-width: 849px){
+  #about{
+    height: 120vh;
+    display: block;
+  }
+  .main_page{
+   box-shadow: none;
+  }
+}
+
+  .image_div{ 
+    width:350px;
     display: flex;
     align-items: center;
     justify-content: center;
-  }
-  .image_div{
-    height: 90%;
     aspect-ratio: 1/1;
-    filter: grayscale(0.4);
+    /* filter: grayscale(0.4); */
     filter: invert(0.2);
   }
   .about_image{
+    height: 90%;
     border-radius: 25%;
     box-shadow: 0 0 5px 5px rgb(67, 27, 70);
   }
@@ -48,29 +47,8 @@
     justify-content: center;
     
   }
-  .content{
+  .about_content{
     font-size: larger;
   } 
-  
-  .svg2{
-    position: absolute;
-    top: 15%;
-    left: 2px;
-  }
-  .svg1{
-    position: absolute;
-    top: 5%;
-    left: 60%;
-  }
-  .svg3{
-    position: absolute;
-    top: 85%;
-    left: 90%;
-  }
-  .svg4{
-    position: absolute;
-    top: 85%;
-    left: 10%;
-  }
  
 

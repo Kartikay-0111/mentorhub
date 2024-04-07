@@ -1,15 +1,13 @@
   .body{
      width: 100%;
-    height: 100%;
+    height: 100vh;
     background:
       white; 
-      position: fixed;
+      position: relative;
   }
   .main{
-    position: absolute;
-    height: 100%;
+    height: 100vh;
     width: 100%;
-    z-index: 2;
     background:
       linear-gradient(90deg, rgb(117, 78, 154) 21px, transparent 1%) center / 22px 22px,
       linear-gradient(rgb(117, 78, 154) 21px, transparent 1%) center / 22px 22px,
@@ -17,8 +15,15 @@
       opacity: 0.95;
   }
   .navbar{
+    width: 85vw;
     margin-left: 7vw;
     margin-right: 7vw;
+    position: fixed;
+    top: 0;
+    z-index: 2;
+    background: linear-gradient(100deg,rgba(128, 0, 128, 0.437),rgba(238, 130, 238, 0.453),rgba(98, 5, 98, 0.442));
+    border-radius: 25px;
+    margin-top: 5px;
   }
   .buttons {
     display: flex;
@@ -32,14 +37,8 @@
     width: 35%;
     justify-content: space-evenly;
   }
-  .design{
-    position: absolute;
-    z-index: 1;
-    height: 100vh;
-    width: 100vw;
-  }
   .svg {
-    position:absolute;
+    position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -47,9 +46,11 @@
     height: 100%;
   }
   .content {
-    position: absolute;
-    top: 50%;
-    left: 50%;
+    position: relative;;
+    display: flex;
+    flex-direction: column;
+    top: 50vh;
+    left: 50vw;
     transform: translate(-50%, -50%);
     text-align: center;
   }
@@ -77,9 +78,9 @@
     right: 30px;
   }
   #scroll{
-    position: absolute;
-    left: 50%;
-    bottom: 5px;
+    position: relative;
+    left:50%;
+    bottom: -54%;
     height: 30px;
     width: 50px;
     transform: rotate(90deg);
@@ -91,13 +92,6 @@
       color: aliceblue;
       z-index: 1000;
       margin: 0;
-    }
-    .img {
-      display: none;
-      opacity: 0;
-    }
-    .svg{
-        display: none;
     }
     .content{
         width: 100%;

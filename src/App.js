@@ -1,11 +1,17 @@
-
+import "bootstrap/dist/css/bootstrap.min.css";
+import "bootstrap/dist/js/bootstrap.bundle.min";
 import Landing from "./components/landing page/landing";
 import About from "./components/aboutus/about";
 import { Mentorcard } from "./components/mentorcard/mentorcard";
-import 'bootstrap/dist/css/bootstrap.min.css'; 
-import 'bootstrap/dist/js/bootstrap.bundle.min';
-import SignUpApp from "./components/sign up/signup";
-import loginApp from "./components/login/login";
+import FeaturesSection from "./components/whatwedo/wahtwedo";
+// import LoginApp from './components/login/login';
+import Review from "./components/review/review";
+// import SignUpApp from "./components/sign up/signup";
+import { useLayoutEffect } from "react";
+import gsap from "gsap";
+import React, { useRef } from "react";
+import { Col } from "react-bootstrap";
+
 function App() {
   const comp = useRef(null);
 
@@ -65,7 +71,23 @@ function App() {
   }, []);
 
   return (
-    <div className="App">
+    <div className="App" ref={comp}>
+      <div className="grid">
+        <div>
+          <Landing />
+        </div>
+        <div>
+          <About />
+        </div>
+        <div>
+          <FeaturesSection />
+        </div>
+        <div>
+          <Mentorcard />
+        </div>
+
+        <Review />
+      </div>
     </div>
   );
 }
